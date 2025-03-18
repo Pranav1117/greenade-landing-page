@@ -31,7 +31,6 @@ export default function Home() {
             </Link>
           </div>
         </motion.nav>
-
         {/* center content */}
         <div className="flex ">
           <div className="space-y-8 w-[40%] pl-20 pr-4 py-20 ">
