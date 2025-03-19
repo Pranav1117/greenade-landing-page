@@ -16,7 +16,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, ease: "easeInOut", delay: 1 }}
-           >
+          >
             ART <span className="font-extralight text-2xl">iChoke</span>
           </motion.div>
           <motion.div
@@ -97,7 +97,7 @@ export default function Home() {
               className="z-1 relative bottom-[15%] right-[30%] text-center text-[10rem] font-bold drop-shadow-[40px_50px_25px_#112801]"
               initial={{ opacity: 0, filter: "blur(5px)" }}
               animate={{ opacity: 1, filter: "blur(0px)" }}
-              transition={{ delay: 3, duration: 0.3 }}
+              transition={{ delay: 2.5, duration: 0.3 }}
             >
               GREENADE!
             </motion.div>
