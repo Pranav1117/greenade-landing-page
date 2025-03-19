@@ -8,19 +8,23 @@ export default function Home() {
   return (
     <main className="flex bg-gradient-to-r from-[#72A233] to-[#336E31] min-h-screen h-[100vh] w-[100vw]">
       {/* content */}
-      <motion.section className="w-[95%]">
+      <section className="w-[95%]">
         {/* logo and main navbar */}
-        <motion.nav
-          className="flex items-center py-4 px-10"
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: [30, 0] }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 1 }}
-          exit={{ y: 0 }}
-        >
-          <div className="font-bold text-2xl w-[20%] cursor-pointer">
+        <nav className="flex items-center py-4 px-10">
+          <motion.div
+            className="font-bold text-2xl w-[20%] cursor-pointer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 1 }}
+           >
             ART <span className="font-extralight text-2xl">iChoke</span>
-          </div>
-          <div className="mx-auto flex gap-10 w-[80%] justify-center">
+          </motion.div>
+          <motion.div
+            className="mx-auto flex gap-10 w-[80%] justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 1 }}
+          >
             <Link href={"/"} className="cursor-pointer">
               Home
             </Link>
@@ -30,8 +34,8 @@ export default function Home() {
             <Link href={"/"} className="cursor-pointer">
               Contact
             </Link>
-          </div>
-        </motion.nav>
+          </motion.div>
+        </nav>
         {/* center content */}
         <div className="flex ">
           <div className="space-y-8 w-[40%] pl-20 pr-4 py-20 ">
@@ -83,6 +87,7 @@ export default function Home() {
                 src={"/greenade.png"}
                 height={400}
                 width={400}
+                priority={true}
                 alt="preview"
                 className="relative drop-shadow-[40px_50px_25px_#112801] z-30"
               />
@@ -98,7 +103,7 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Side navbar */}
       <aside className="w-[5%] h-screen bg-gradient-to-t from-[#5B9235] to-transparent p-4 flex flex-col items-center">
