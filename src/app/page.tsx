@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import * as motion from "motion/react-client";
+import { motion } from "motion/react";
 import { InstaIcon, TwitterIcon, HamburgerIcon } from "../app/components/Icons";
 
 export default function Home() {
@@ -89,8 +90,8 @@ export default function Home() {
 
             <motion.div
               className="z-1 relative bottom-[15%] right-[30%] text-center text-[10rem] font-bold drop-shadow-[40px_50px_25px_#112801]"
-              initial={{ opacity: 0, filter:"blur(5px)" }}
-              animate={{ opacity: 1, filter:"blur(0px)" }}
+              initial={{ opacity: 0, filter: "blur(5px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
               transition={{ delay: 3, duration: 0.3 }}
             >
               GREENADE!
