@@ -2,11 +2,26 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion, TargetAndTransition } from "motion/react";
 import { InstaIcon, TwitterIcon, HamburgerIcon } from "../app/components/Icons";
 
+type AxisProps = number | string | Array<number | string>;
+interface MotionProps extends TargetAndTransition {
+  opacity: number;
+  y?: AxisProps;
+  x?: AxisProps;
+}
+interface AnimateProps {
+  initial: MotionProps;
+  animate: MotionProps;
+  transition: {
+    duration: number;
+    ease: string;
+  };
+}
+
 export default function Home() {
-  const [animateProp, setAnimateProp] = useState({
+  const [animateProp, setAnimateProp] = useState<AnimateProps>({
     initial: { opacity: 0, y: -50 },
     animate: { opacity: 1, y: [-50, 20, -10, 5, 0] },
     transition: { duration: 1, ease: "easeOut" },
