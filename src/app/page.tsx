@@ -6,21 +6,22 @@ import { InstaIcon, TwitterIcon, HamburgerIcon } from "../app/components/Icons";
 
 export default function Home() {
   return (
-    <main className="flex bg-gradient-to-r from-[#72A233] to-[#336E31] min-h-screen h-[100vh] w-[100vw]">
+    <main className="flex flex-col md:flex-row bg-gradient-to-r from-[#72A233] to-[#336E31] min-h-screen min-w-screen md:w-[100vw]">
       {/* content */}
-      <section className="w-[95%]">
+      <section className="md:w-[95%]">
         {/* logo and main navbar */}
-        <nav className="flex items-center py-4 px-10">
+        <nav className="flex items-center py-4 px-4 justify-between md:px-10">
           <motion.div
-            className="font-bold text-2xl w-[20%] cursor-pointer"
+            className="font-bold text-md md:text-2xl md:w-[20%] cursor-pointer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, ease: "easeInOut", delay: 1 }}
           >
-            ART <span className="font-extralight text-2xl">iChoke</span>
+            ART <span className="font-extralight text-md md:text-2xl">iChoke</span>
           </motion.div>
+         
           <motion.div
-            className="mx-auto flex gap-10 w-[80%] justify-center"
+            className="md:mx-auto text-sm md:text-lg flex gap-4 md:gap-10 md:w-[80%] justify-end md:justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, ease: "easeInOut", delay: 1 }}
@@ -37,8 +38,8 @@ export default function Home() {
           </motion.div>
         </nav>
         {/* center content */}
-        <div className="flex ">
-          <div className="space-y-8 w-[40%] pl-20 pr-4 py-20 ">
+        <div className="flex flex-col-reverse md:flex-row mt-10 md:mt-0">
+          <div className="space-y-8 w-[100%] md:w-[40%] pl-20 pr-4 py-20 ">
             <motion.div
               className="flex items-end justify-end text-2xl font-bold overflow-hidden"
               initial={{ opacity: 0, clipPath: "inset(0% 0% 0% 100%)" }}
@@ -77,24 +78,25 @@ export default function Home() {
               READ MORE
             </motion.button>
           </div>
-          <div className="w-[60%] flex-flex-col">
+
+          <div className="w-[100%] md:w-[60%] flex flex-col items-center  md:items-start">
             <motion.div
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: [-50, 20, -10, 5, 0] }}
               transition={{ duration: 1, ease: "easeOut" }}
+              className="relative h-[400px] w-[300px]  md:h-[550px] md:w-[500px] z-100"
             >
               <Image
                 src={"/greenade.png"}
-                height={400}
-                width={400}
+                fill={true}
                 priority={true}
                 alt="preview"
-                className="relative drop-shadow-[40px_50px_25px_#112801] z-30"
+                className="relative drop-shadow-[40px_50px_25px_#112801] z-30 object-contain"
               />
             </motion.div>
 
             <motion.div
-              className="z-1 relative bottom-[15%] right-[30%] text-center text-[10rem] font-bold drop-shadow-[40px_50px_25px_#112801]"
+              className="z-1 relative bottom-10 md:bottom-[15%] md:right-[30%] text-cente text-[3.5rem] md:text-[10rem] font-bold drop-shadow-[40px_50px_25px_#112801]"
               initial={{ opacity: 0, filter: "blur(5px)" }}
               animate={{ opacity: 1, filter: "blur(0px)" }}
               transition={{ delay: 2.5, duration: 0.3 }}
@@ -106,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Side navbar */}
-      <aside className="w-[5%] h-screen bg-gradient-to-t from-[#5B9235] to-transparent p-4 flex flex-col items-center">
+      <aside className=" md:w-[5%] h-screen bg-gradient-to-t from-[#5B9235] to-transparent p-4 flex flex-col items-center">
         <div className="h-[10%] cursor-pointer">
           <HamburgerIcon />
         </div>
