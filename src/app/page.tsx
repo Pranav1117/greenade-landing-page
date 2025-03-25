@@ -55,9 +55,9 @@ export default function Home() {
         </nav>
         {/* center content */}
         <div className="flex gap-10 md:gap-0 flex-row mt-30 md:mt-0">
-          <div className="space-y-5 justify-end md:space-y-8 w-[75%] md:w-[40%] p-2 md:pl-20 md:pr-4 md:py-20 ">
+          <div className="space-y-5 justify-end md:space-y-8 w-[75%] md:w-[40%] px-4 py-2 md:pl-20 md:pr-4 md:py-20 ">
             <motion.div
-              className="flex px-4 md:px-0 items-end w-[100%] justify-end text-md md:text-2xl font-bold"
+              className="flex md:px-0 items-end w-[100%] justify-end text-md md:text-2xl font-bold"
               initial={{ opacity: 0, clipPath: "inset(0% 0% 0% 100%)" }}
               animate={{ opacity: 1, clipPath: "inset(0% 0% 0% 0%)" }}
               transition={{ duration: 1, ease: "easeInOut", delay: 2 }}
